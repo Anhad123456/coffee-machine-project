@@ -62,5 +62,10 @@ def is_resources_sufficient(drink):
         enough = False
     return enough
 
-# def process_coins(choice):
-    
+def process_coins(choice):
+    quarters = int(input("How many quarters: "))
+    dimes = int(input("How many dimes: "))
+    nickels = int(input("How many nickels: "))
+    pennies = int(input("How many pennies: "))
+    total = quarters * 0.25 + dimes * 0.1 + nickels * 0.05 + pennies * 0.01
+    return total

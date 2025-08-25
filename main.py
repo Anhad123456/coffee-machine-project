@@ -3,6 +3,7 @@ MENU = {
         "ingredients": {
             "water": 50,
             "coffee": 18,
+            "milk": 0
         },
         "cost": 1.5,
     },
@@ -37,13 +38,29 @@ def report():
     print(f"Money: {profit}")
 
 
-
 def start_machine():
     choice = input("What would you like? (espresso/latte/cappuccino):")
 
 
-def is_resources_sufficient(drink):
-    if drink == "espresso":
-        water = MENU["espresso"]["ingredients"]["water"]
 
-print(MENU["espresso"]["ingredients"]["water"])
+
+def is_resources_sufficient(drink):
+    water = MENU[drink]["ingredients"]["water"]
+    coffee = MENU[drink]["ingredients"]["coffee"]
+    milk = MENU[drink]["ingredients"]["milk"]
+    message = "“Sorry there is not enough "
+    enough = True
+
+    if water > resources["water"]:
+        print(message + "water.")
+        enough = False
+    if milk > resources["milk"]:
+        print(message + "milk.")
+        enough = False
+    if coffee > resources["coffee"]:
+        print(message + "coffee.")
+        enough = False
+    return enough
+
+# def process_coins(choice):
+    

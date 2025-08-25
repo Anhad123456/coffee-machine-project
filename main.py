@@ -30,9 +30,20 @@ resources = {
     "coffee": 100,
 }
 
-
 def report():
     print(f"Water: {resources["water"]}")
     print(f"Milk: {resources["milk"]}")
     print(f"Coffee: {resources["coffee"]}")
     print(f"Money: {profit}")
+
+
+
+def start_machine():
+    choice = input("What would you like? (espresso/latte/cappuccino):")
+
+
+def is_resources_sufficient(drink):
+    if drink == "espresso":
+        water = MENU["espresso"]["ingredients"]["water"]
+
+print(MENU["espresso"]["ingredients"]["water"])
